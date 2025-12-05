@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="fa" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>سایت خفن من</title>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Vazirmatn:wght@300;500;700&display=swap');
+
+        body {
+            margin: 0;
+            font-family: "Vazirmatn", sans-serif;
+            background: #0f0f0f;
+            color: white;
+        }
+        
+        header {
+            height: 100vh;
+            background: linear-gradient(to bottom right, #0f0f0f, #1b1b1b);
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+            position: relative;
+            overflow: hidden;
+        }
+
+        /* انیمیشن بَک‌گراند */
+        header::after {
+            content: "";
+            position: absolute;
+            top: -50%;
+            left: -50%;
+            width: 200%;
+            height: 200%;
+            background: radial-gradient(circle, #4b00ff55, transparent 70%);
+            animation: rotateBg 20s linear infinite;
+        }
+
+        @keyframes rotateBg {
+            from { transform: rotate(0deg); }
+            to { transform: rotate(360deg); }
+        }
+
+        h1 {
+            font-size: 3.5rem;
+            z-index: 2;
+        }
+
+        p {
+            font-size: 1.2rem;
+            opacity: 0.8;
+            z-index: 2;
+        }
+
+        .btn {
+            margin-top: 20px;
+            padding: 12px 28px;
+            background: #7b2fff;
+            border-radius: 8px;
+            color: white;
+            text-decoration: none;
+            font-weight: 700;
+            transition: 0.3s;
+            z-index: 2;
+        }
+
+        .btn:hover {
+            background: #a774ff;
+            transform: scale(1.05);
+        }
+
+        section {
+            padding: 60px 15%;
+        }
+
+        .cards {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 25px;
+        }
+
+        .card {
+            background: #1c1c1c;
+            padding: 30px;
+            border-radius: 12px;
+            text-align: center;
+            transition: 0.3s;
+            border: 1px solid #2c2c2c;
+        }
+
+        .card:hover {
+            transform: translateY(-10px);
+            border-color: #7b2fff;
+        }
+
+        footer {
+            text-align: center;
+            padding: 25px;
+            opacity: 0.5;
+        }
+    </style>
+</head>
+<body>
+
+    <header>
+        <h1>به سایت خفن من خوش اومدی 😎</h1>
+        <p>جایی برای نمایش خلاقیت، قدرت طراحی و انیمیشن‌های خفن!</p>
+        <a href="#services" class="btn">شروع کن</a>
+    </header>
+
+    <section id="services">
+        <h2>ویژگی‌های سایت</h2>
+        <div class="cards">
+            <div class="card">
+                <h3>طراحی مدرن</h3>
+                <p>ترکیب رنگ تیره + افکت‌های نئونی برای ظاهر حرفه‌ای.</p>
+            </div>
+            <div class="card">
+                <h3>انیمیشن نرم</h3>
+                <p>حرکت‌های subtle و جذاب برای تجربه بهتر کاربری.</p>
+            </div>
+            <div class="card">
+                <h3>واکنش‌گرا</h3>
+                <p>در موبایل، تبلت و دسکتاپ ظاهر عالی داره.</p>
+            </div>
+        </div>
+    </section>
+
+    <footer>
+        © 2025 — ساخته شده با عشق ❤️
+    </footer>
+
+</body>
+</html>
